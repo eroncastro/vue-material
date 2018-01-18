@@ -1,6 +1,21 @@
+export var changeHtmlMetaColor;
 export var createNewStyleElement;
 
 if (process.env.VUE_ENV !== 'server') {
+  changeHtmlMetaColor = (color, themeClass, previousClass) => {
+    var elem = document.querySelector('meta[name="theme-color"]');
+
+    if (elem) return;
+
+    elem = document.createElement('meta');
+    elem.setAttribute('name', 'theme-color');
+    elem.setAttribute('content', color);
+
+    document.head.appendChild(elem);
+    document.body.classList.remove(previousClass);
+    document.body.classList.add(themeClass);
+  };
+
   createNewStyleElement = (style, styleId) => {
     const head = document.head;
     const styleElement = head.querySelector('#' + styleId);

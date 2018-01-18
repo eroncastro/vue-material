@@ -166,6 +166,15 @@ export default function install(Vue) {
         const prefix = this.prefix;
 
         this.useTheme(name);
+
+        if (changeHtmlMetaColor) {
+          changeHtmlMetaColor(
+            registeredPrimaryColor[name],
+            prefix + name,
+            prefix + this.currentTheme
+          );
+        }
+
         this.currentTheme = name;
       }
     },
