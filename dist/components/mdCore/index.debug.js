@@ -916,11 +916,6 @@ function install(Vue) {
         var prefix = this.prefix;
 
         this.useTheme(name);
-
-        if (_dom.changeHtmlMetaColor) {
-          (0, _dom.changeHtmlMetaColor)(registeredPrimaryColor[name], prefix + name, prefix + this.currentTheme);
-        }
-
         this.currentTheme = name;
       }
     },
