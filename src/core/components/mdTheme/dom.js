@@ -5,7 +5,9 @@ if (process.env.VUE_ENV !== 'server') {
   changeHtmlMetaColor = (color, themeClass, previousClass) => {
     var elem = document.querySelector('meta[name="theme-color"]');
 
-    if (elem) return;
+    if (elem) {
+      return;
+    }
 
     elem = document.createElement('meta');
     elem.setAttribute('name', 'theme-color');

@@ -1377,7 +1377,7 @@ var Component = __webpack_require__(0)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/Users/marcosmoura/Projects/github/vue-material/src/core/components/mdTheme/mdTheme.vue"
+Component.options.__file = "/home/eron/Projects/vue-material/src/core/components/mdTheme/mdTheme.vue"
 if (Component.esModule && Object.keys(Component.esModule).some((function (key) {return key !== "default" && key.substr(0, 2) !== "__"}))) {console.error("named exports are not supported in *.vue files.")}
 
 /* hot reload */
@@ -1463,15 +1463,14 @@ if (process.env.VUE_ENV !== 'server') {
     var elem = document.querySelector('meta[name="theme-color"]');
 
     if (elem) {
-      elem.setAttribute('content', color);
-    } else {
-      elem = document.createElement('meta');
-      elem.setAttribute('name', 'theme-color');
-      elem.setAttribute('content', color);
-
-      document.head.appendChild(elem);
+      return;
     }
 
+    elem = document.createElement('meta');
+    elem.setAttribute('name', 'theme-color');
+    elem.setAttribute('content', color);
+
+    document.head.appendChild(elem);
     document.body.classList.remove(previousClass);
     document.body.classList.add(themeClass);
   };
@@ -1728,7 +1727,7 @@ var Component = __webpack_require__(0)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/Users/marcosmoura/Projects/github/vue-material/src/core/components/mdInkRipple/mdInkRipple.vue"
+Component.options.__file = "/home/eron/Projects/vue-material/src/core/components/mdInkRipple/mdInkRipple.vue"
 if (Component.esModule && Object.keys(Component.esModule).some((function (key) {return key !== "default" && key.substr(0, 2) !== "__"}))) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] mdInkRipple.vue: functional components are not supported with templates, they should use render functions.")}
 
